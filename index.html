@@ -1,7 +1,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Flybase powered sample landing page.</title>
+	<title>Botarang Beta</title>
 	<base target="/">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -110,11 +110,10 @@
 		<div class="cover-container">
 			<div class="masthead clearfix">
 				<div class="inner">
-					<h3 class="masthead-brand"><i class="fa fa-bolt"></i> Flybase Splash</h3>
+					<h3 class="masthead-brand"><i class="fa fa-bolt"></i> Botarang</h3>
 					<nav>
 						<ul class="nav masthead-nav">
 							<li class="active"><a href="#">Get Early Access</a></li>
-							<li><a href="https://github.com/flybaseio/landing-page"><i class="fa fa-github"></i></a></li>
 							<li><a href="https://twitter.com/flybaseio"><i class="fa fa-twitter"></i></a></li>
 						</ul>
 					</nav>
@@ -124,7 +123,7 @@
 		<div class="row">
 			<div class="col-lg-12 text-center v-center">
 				<h1>Hello Landing</h1>
-				<p class="lead">A Flybase-powered landing page</p>
+				<p class="lead">A new generation of message bot management</p>
 				<br><br><br>
 				<div class="row">
 					<div id="signup-success" class="alert alert-danger col-lg-12" role="alert">
@@ -141,11 +140,7 @@
 		</div> <!-- /row -->
 		<div class="row">
 			<div class="col-lg-12 text-center v-center socialbar">
-				<a href="#"><i class="fa fa-google-plus"></i></a>
-				<a href="#"><i class="fa fa-facebook"></i></a> 
 				<a href="https://twitter.com/flybaseio"><i class="fa fa-twitter"></i></a>
-				<a href="https://github.com/flybaseio/landing-page"><i class="fa fa-github"></i></a>
-				<a href="#"><i class="fa fa-pinterest"></i></a>
 			</div>
 		</div>
 		<br><br><br><br><br>
@@ -213,7 +208,7 @@
 		$("#signup-form").submit( function(e){
 			e.preventDefault();
 
-			var myFlybaseRef = new Flybase("YOUR-API-KEY", "YOUR-APP", "signups");
+			var myFlybaseRef = new  Flybase("ca46be22-5ae6-4e61-b775-49737096f02e", "beta", "signups");
 			myFlybaseRef.push({
 				email: $("#email").val(),
 			}, function(data) {
