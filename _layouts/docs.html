@@ -1,0 +1,33 @@
+---
+layout: default
+body_class: left-sidebar
+---
+<!-- Main -->
+<div id="page" class="container">	
+	<!-- Main Heading -->
+	<div class="title-heading">
+		<h2>{{ page.subtitle }}</h2>
+		<p>{{ page.subtitle2 }}</p>
+	</div>
+	
+	<!-- Main Content -->
+	<div id="main">
+		<div class="row">
+			<!-- Sidebar -->
+			<div id="sidebar" class="4u 12u(narrower)">
+{% include sidebar.html %}
+			</div>
+			<!-- Content -->
+			<div id="content" class="8u 12u(narrower) important(narrower)">
+				<article>
+{% if page.subheader %}
+					<header>
+						<h2>{{ page.subheader }}</h2>
+					</header>
+{% endif %}
+					{{ content }}
+				</article>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+	<meta property="article:author" content="604781976">
+<!-- Twitter Cards -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="freekrai">
+	<meta name="twitter:creator" content="freekrai">
+	<meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta name="twitter:description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta name="twitter:image" content="{% if page.image %}https://freekrai.com{{ page.image }}{% else %}https://freekrai.com/assets/freekrai.png{% endif %}" />
+<!-- Facebook Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta property="og:site_name" content="{{ site.title }}">
+	<meta property="og:image" content="{% if page.image %}https://freekrai.com{{ page.image }}{% else %}https://freekrai.com/assets/freekrai.png{% endif %}" />
+	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<meta property="og:description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta property="og:locale" content="en_US">
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="assets/fonts/flaticon.css">
+	<!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="/assets/css/main.css?v=1.4e" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<link rel="stylesheet" href="/assets/css/zenburn.css?v=1.c2" />
+{% comment %}
+	<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ubqxsvz9';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+{% endcomment %}
+</head>
+<body class="{{ page.body_class }}">
+	<div id="page-wrapper">
+		<!-- Header Wrapper -->
+		<div id="header-wrapper">
+
+			<!-- Header -->
+			<div id="header" class="container">
+
+				<!-- Logo -->
+				<h1><a href="/" id="logo"><i class="flaticon-robot-with-flexible-arms-and-legs"></i> Botarang</h3></a></h1>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="/">Home</a></li>
+{% comment %}
+						<li><a href="/docs">Docs</a></li>
+						<li><a href="/pricing">Pricing</a></li>
+						<li><a class="bloglink" href="http://blog.freekrai.com" title="The Joined Node Blog">Blog</a></li>
+						<li><a href="https://app.freekrai.com/login" class="btn btn-primary">Login</a></li>
+						<li><a href="https://app.freekrai.com/signup" class="btn btn-default">Signup</a></li>
+						<li>
+						<li><a href="/docs/features">Overview</a></li>
+							<a href="#">Dropdown</a>
+							<ul>
+								<li><a href="#">Lorem ipsum dolor</a></li>
+								<li><a href="#">Magna phasellus</a></li>
+								<li><a href="#">Etiam dolore nisl</a></li>
+								<li>
+									<a href="#">Phasellus consequat</a>
+									<ul>
+										<li><a href="#">Lorem ipsum dolor</a></li>
+										<li><a href="#">Phasellus consequat</a></li>
+										<li><a href="#">Magna phasellus</a></li>
+										<li><a href="#">Etiam dolore nisl</a></li>
+										<li><a href="#">Veroeros feugiat</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Veroeros feugiat</a></li>
+							</ul>
+						</li>
+						<li><a href="left-sidebar.html">Left Sidebar</a></li>
+						<li><a href="right-sidebar.html">Right Sidebar</a></li>
+						<li><a href="no-sidebar.html">No Sidebar</a></li>
+{% endcomment %}
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- Main Wrapper -->
+		<div id="main-wrapper">
+			{{ content }}
+		</div>
+		<!-- Footer Wrapper -->
+		<div id="footer-wrapper">
+			<div id="footer" class="container">
+{% comment %}
+				<div class="title"><span>Find Us Online</span></div>
+{% endcomment %}
+				<div class="row">
+					<section class="8u 12u(narrower)">
+						<ul class="icons">
+							<li class="icon fa-twitter">
+								<a href="http://twitter.com/freekrai">@freekrai</a>
+							</li>
+							<li class="icon fa-github">
+								<a href="http://github.com/freekrai">@freekrai</a>
+							</li>
+						</ul>
+					</section>
+					<section class="4u 12u(narrower)">
+{% comment %}
+						<ul class="icons">
+							<li class="icon fa-rss">
+								<a href="http://blog.freekrai.com">Our Blog</a>
+							</li>
+							<li class="icon fa-envelope">
+								<a href="mailto:hello@flybase.io">hello@flybase.io</a>
+							</li>
+						</ul>
+{% endcomment %}
+					</section>
+				</div>
+			</div>
+		</div>
+		<!-- Copyright -->
+		<div id="copyright">
+			&copy; {{ site.time | date: '%Y' }}, Botarang by <a href="http://flybase.io">Flybase</a> <small style="font-size:12px;">(1059105 B.C. LTD)</small>.
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script defer src="/assets/js/jquery.min.js"></script>
+	<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+	<script defer src="/assets/js/jquery.dropotron.min.js"></script>
+	<script defer src="/assets/js/skel.min.js"></script>
+	<script defer src="/assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+	<script defer src="/assets/js/main.js"></script>
+{% comment %}
+<script>
+window.Intercom('boot', {
+	app_id: "ubqxsvz9"
+});
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56159710-6', 'auto');
+ga('send', 'pageview');
+</script>
+{% endcomment %}
+</body>
+</html>

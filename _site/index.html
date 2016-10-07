@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Home - Botarang</title>
+	<meta name="description" content="Joined Node is a simple, lightweight, and secure way of running isolated backend code that removes or reduces the need for a backend.
+">
+
+	<link rel="canonical" href="https://botarang.com/">
+
+	<meta property="article:author" content="604781976">
+<!-- Twitter Cards -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="freekrai">
+	<meta name="twitter:creator" content="freekrai">
+	<meta name="twitter:title" content="Home - Botarang">
+	<meta name="twitter:description" content="Home">
+	<meta name="twitter:image" content="https://freekrai.com/assets/freekrai.png" />
+<!-- Facebook Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Home - Botarang">
+	<meta property="og:site_name" content="Botarang">
+	<meta property="og:image" content="https://freekrai.com/assets/freekrai.png" />
+	<meta property="og:url" content="https://botarang.com/">
+	<meta property="og:description" content="Home">
+	<meta property="og:locale" content="en_US">
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="assets/fonts/flaticon.css">
+	<!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="/assets/css/main.css?v=1.4e" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<link rel="stylesheet" href="/assets/css/zenburn.css?v=1.c2" />
+
+</head>
+<body class="homepage">
+	<div id="page-wrapper">
+		<!-- Header Wrapper -->
+		<div id="header-wrapper">
+
+			<!-- Header -->
+			<div id="header" class="container">
+
+				<!-- Logo -->
+				<h1><a href="/" id="logo"><i class="flaticon-robot-with-flexible-arms-and-legs"></i> Botarang</h3></a></h1>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="/">Home</a></li>
+
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- Main Wrapper -->
+		<div id="main-wrapper">
+					<!-- Main -->
+		<div id="banner-wrapper">
+			<section id="banner" class="container">
+				<div class="row">
+					<div id="content" class="12u">
+						<img src="/rang.png" style="max-width: 15em;width: 90%;padding: 0.5em;" />
+						<header class="need">
+							<h2>Welcome to Botarang</h2>
+							<p>A new generation of message bot management</p>
+						</header>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+<div id="featured-wrapper">
+	<section id="featured" class="container">
+			<div class="title"><span>Join the beta</span></div>
+			<div class="row">
+				<div class="12u 12u(narrower)">
+					<div id="signup-success" class="alert alert-danger col-lg-12" role="alert" style="display:none;text-align:center;margin:0 auto;">
+						<strong>Oh snap!</strong> Change a few things up and try submitting again.
+					</div>
+					<form id="signup-form" role="form">
+						<div class="input-group" style="text-align:center;margin:0 auto;">
+							<input class="form-control input-lg" title="Don't worry. We hate spam, and will not share your email with anyone." placeholder="Enter your email address" type="email" id="email" name="email" required>
+							<span class="input-group-btn"><button class="btn btn-lg btn-primary" id="signup-button" type="submit">OK</button></span>
+						</div>
+					</form>
+				</div>
+			</div>
+	</section>
+</div>
+<!--scripts loaded here-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.flybase.io/flybase.js"></script>
+<script>
+	var signupForm = document.getElementById('signup-form');
+	var signupSuccess = document.getElementById('signup-success');
+	var signupError = document.getElementById('signup-error');
+	var signupBtn = document.getElementById('signup-button');
+
+	$("#signup-form").submit( function(e){
+		e.preventDefault();
+
+		var myFlybaseRef = new  Flybase("ca46be22-5ae6-4e61-b775-49737096f02e", "beta", "signups");
+		myFlybaseRef.push({
+			email: $("#email").val(),
+		}, function(data) {
+			signupBtn.disabled = false;
+			$("#signup-success").html( 'Thanks for signing up!' ).show();
+			$("#signup-form").hide();
+		});
+		signupBtn.disabled = true;
+		return false;
+	});
+</script>
+
+
+
+		</div>
+		<!-- Footer Wrapper -->
+		<div id="footer-wrapper">
+			<div id="footer" class="container">
+
+				<div class="row">
+					<section class="8u 12u(narrower)">
+						<ul class="icons">
+							<li class="icon fa-twitter">
+								<a href="http://twitter.com/freekrai">@freekrai</a>
+							</li>
+							<li class="icon fa-github">
+								<a href="http://github.com/freekrai">@freekrai</a>
+							</li>
+						</ul>
+					</section>
+					<section class="4u 12u(narrower)">
+
+					</section>
+				</div>
+			</div>
+		</div>
+		<!-- Copyright -->
+		<div id="copyright">
+			&copy; 2016, Botarang by <a href="http://flybase.io">Flybase</a> <small style="font-size:12px;">(1059105 B.C. LTD)</small>.
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script defer src="/assets/js/jquery.min.js"></script>
+	<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+	<script defer src="/assets/js/jquery.dropotron.min.js"></script>
+	<script defer src="/assets/js/skel.min.js"></script>
+	<script defer src="/assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+	<script defer src="/assets/js/main.js"></script>
+
+</body>
+</html>
